@@ -29,6 +29,12 @@ export default function ContactSection() {
               <Mail />
             </a>
           </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-[#D7E2EA]/65">
+            <span className="uppercase tracking-[0.16em] text-[10px] text-[#D7E2EA]/40">Coding profiles</span>
+            <a className="text-link" href="https://leetcode.com/u/hsshreyas2005/" target="_blank" rel="noopener noreferrer">LeetCode ↗</a>
+            <a className="text-link" href="https://www.geeksforgeeks.org/user/hsshreyas1qmrr/" target="_blank" rel="noopener noreferrer">GeeksforGeeks ↗</a>
+          </div>
         </div>
       </FadeIn>
     </section>

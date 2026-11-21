@@ -3,33 +3,43 @@ import FadeIn from '../components/FadeIn'
 const SERVICES = [
   {
     number: '01',
-    name: 'Backend Engineering',
-    description: 'Python, C++, and FastAPI across full-stack and AI-enabled application backends.',
+    name: 'Languages',
+    description: 'Python (primary), SQL, JavaScript, C++, and C.',
   },
   {
     number: '02',
-    name: 'Full-Stack Development',
-    description: 'React and TypeScript interfaces connected to FastAPI services and application data.',
+    name: 'Backend & APIs',
+    description: 'FastAPI, REST API design, JSON contracts, JWT authentication, Node.js, Express.js, and third-party API integration.',
   },
   {
     number: '03',
-    name: 'AI / Computer Vision',
-    description: 'Applied AI using YOLOv8, Gemini Vision OCR, and agentic planning workflows.',
+    name: 'Databases',
+    description: 'MySQL, SQLAlchemy, and Firebase Cloud Firestore for relational data and persistent application state.',
   },
   {
     number: '04',
-    name: 'Assistive Technology',
-    description: 'Voice-guided interaction, product recognition, OCR, and audio feedback for accessible shopping.',
+    name: 'AI & Computer Vision',
+    description: 'YOLOv8, OpenCV, OCR, text-to-speech, NumPy, and multi-stage real-time inference pipelines.',
   },
   {
     number: '05',
-    name: 'Data & Persistence',
-    description: 'MySQL, Firebase Authentication, and Cloud Firestore for application data and saved plans.',
+    name: 'AWS & Cloud',
+    description: 'AWS Pricing API, Lambda and S3 pricing, EC2 cost modelling, Render deployment, and Firebase Authentication.',
   },
   {
     number: '06',
+    name: 'Frontend & Mobile',
+    description: 'React, TypeScript, JavaScript, and Android Studio for responsive web and mobile applications.',
+  },
+  {
+    number: '07',
     name: 'Connected Data Systems',
-    description: 'Google Earth Engine, Open-Meteo, INCOIS PFZ bulletins, GPS, and the AWS Pricing API.',
+    description: 'AWS Pricing API, Google Maps, satellite data, INCOIS PFZ advisories, and live marine weather feeds.',
+  },
+  {
+    number: '08',
+    name: 'Engineering Practice',
+    description: 'Integration testing, debugging, technical documentation, Git, GitHub, and Linux/Unix.',
   },
 ]
 

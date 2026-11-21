@@ -1,9 +1,37 @@
 import { useRef } from 'react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
-import LiveProjectButton from '../components/LiveProjectButton'
 import ProjectGlyph from '../components/ProjectGlyph'
 import { PROJECTS, type PortfolioProject } from '../content/projects'
+
+function ProjectActions({ project }: { project: PortfolioProject }) {
+  const links = [
+    { label: 'Source code', href: project.repositoryUrl },
+    { label: 'Live demo', href: project.liveDemoUrl },
+  ].filter((link): link is { label: string; href: string } => Boolean(link.href))
+
+  if (!links.length) {
+    return (
+      <a
+        href={`mailto:hsshreyas.1si23cs056@gmail.com?subject=${encodeURIComponent(`Question about ${project.name}`)}`}
+        className="project-action"
+      >
+        Ask about project <ArrowUpRight aria-hidden="true" size={14} />
+      </a>
+    )
+  }
+
+  return (
+    <div className="flex flex-wrap items-center justify-end gap-2">
+      {links.map((link) => (
+        <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" className="project-action" aria-label={`${link.label} for ${project.name}`}>
+          {link.label} <ArrowUpRight aria-hidden="true" size={14} />
+        </a>
+      ))}
+    </div>
+  )
+}
 
 function ProjectArtwork({ project }: { project: PortfolioProject }) {
   return (
@@ -72,7 +100,7 @@ function ProjectCard({ project, index, total }: { project: PortfolioProject; ind
               <h3 className="project-stack-title text-[#D7E2EA] font-medium uppercase text-xl sm:text-3xl md:text-4xl">{project.name}</h3>
             </div>
           </div>
-          <LiveProjectButton href="#contact" label="Discuss project" className="project-discuss-button" />
+          <ProjectActions project={project} />
         </div>
         <div className="flex-1 min-h-0">
           <ProjectArtwork project={project} />

@@ -4,13 +4,15 @@ import ContactButton from '../components/ContactButton'
 import { useReducedMotion } from 'framer-motion'
 
 const ABOUT_TEXT =
-  "I’m H.S. Shreyas, an aspiring software engineer and 2027 graduate based in Bengaluru, India. I build backend and full-stack applications, with a focus on practical AI/ML systems. I enjoy turning complex data and workflows into software that helps people make useful decisions."
+  "I’m H.S. Shreyas, a Computer Science and Engineering student at Siddaganga Institute of Technology, expected to graduate in 2027. Based in Bengaluru, I focus on Python backend engineering, full-stack applications, and practical AI/ML systems. I’m especially interested in building LLM agents, retrieval, and semantic search."
 
 const HIGHLIGHTS = [
-  { label: 'Focus', value: 'Backend & full-stack' },
-  { label: 'Applications', value: 'AI / ML systems' },
-  { label: 'Based in', value: 'Bengaluru, India' },
+  { label: 'Degree', value: 'B.E. · Computer Science & Engineering' },
+  { label: 'Institution', value: 'Siddaganga Institute of Technology · Nov 2023–Present' },
+  { label: 'Academic record', value: '8.53 / 10 CGPA · Expected 2027' },
 ]
+
+const COURSEWORK = ['Data Structures & Algorithms', 'DBMS', 'Artificial Intelligence', 'Operating Systems', 'Computer Networks', 'OOP']
 
 function MoonGlyph({ className }: { className?: string }) {
   return (
@@ -141,8 +143,20 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="mt-2 sm:mt-4 md:mt-6">
-          <ContactButton />
+        <FadeIn delay={0.35} y={20} className="w-full rounded-[24px] border border-white/10 bg-[#121212] p-5 sm:p-6">
+          <p className="text-[#D7E2EA]/55 uppercase tracking-[0.22em] text-[10px] sm:text-xs">Relevant coursework</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {COURSEWORK.map((course) => (
+              <span key={course} className="rounded-full border border-white/10 px-3 py-1.5 text-xs sm:text-sm text-[#D7E2EA]/80">
+                {course}
+              </span>
+            ))}
+          </div>
+        </FadeIn>
+
+        <div className="mt-2 sm:mt-4 md:mt-6 flex flex-wrap justify-center gap-3">
+          <ContactButton href="#contact" label="Get in touch" />
+          <ContactButton href="#experience" label="Experience & awards" />
         </div>
       </div>
     </section>

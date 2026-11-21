@@ -609,6 +609,49 @@ body {
   width: 1.1rem;
 }
 
+.project-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 38px;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid rgba(215, 226, 234, 0.62);
+  border-radius: 999px;
+  color: #d7e2ea;
+  background: rgba(12, 12, 12, 0.32);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.project-action:hover {
+  border-color: var(--project-accent, #d7e2ea);
+  background: color-mix(in srgb, var(--project-accent, #d7e2ea) 16%, transparent);
+  color: #fff;
+}
+
+.project-action:focus-visible,
+.text-link:focus-visible {
+  outline: 2px solid #80b0ff;
+  outline-offset: 3px;
+}
+
+.text-link {
+  color: #d7e2ea;
+  text-underline-offset: 4px;
+  transition: color 160ms ease;
+}
+
+.text-link:hover {
+  color: #80b0ff;
+}
+
 .card .social-link1,
 .card .social-link2,
 .card .social-link3 {
@@ -691,13 +734,11 @@ body {
     font-size: 0.69rem;
   }
 
-  .project-discuss-button {
-    padding: 0.52rem 0.68rem !important;
-  }
-
-  .project-discuss-button .text_button {
+  .project-action {
+    min-height: 34px;
+    padding: 0.48rem 0.6rem;
     font-size: 0.5rem;
-    letter-spacing: 0.07rem;
+    letter-spacing: 0.045rem;
   }
 }
 
